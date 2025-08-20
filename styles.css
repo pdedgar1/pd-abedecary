@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.upload-section {
+    margin-bottom: 30px;
+    padding: 25px;
+    border: 2px dashed #667eea;
+    border-radius: 10px;
+    text-align: center;
+    background: rgba(102, 126, 234, 0.05);
+    transition: all 0.3s ease;
+}
+
+.upload-section:hover {
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.file-input {
+    margin: 10px 0;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-input:hover {
+    border-color: #667eea;
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.2);
+}
+
+.options-section {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: rgba(118, 75, 162, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(118, 75, 162, 0.2);
+    display: none;
+}
+
+.option-group {
+    margin-bottom: 20px;
+}
+
+.option-group label {
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-option:hover {
+    border-color: #667eea;
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.radio-option input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.radio-option span {
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"]:checked + span {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.radio-option.checked {
+    border-color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.rearrange-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.rearrange-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.rearrange-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.results-section {
+    margin-top: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    min-height: 200px;
+}
+
+.results-header {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.word-display {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #444;
+}
+
+.word-display.horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.word-display.vertical {
+    columns: auto;
+    column-width: 200px;
+    column-gap: 30px;
+    column-fill: balance;
+}
+
+.word-item {
+    padding: 4px 8px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+    break-inside: avoid;
+}
+
+.word-item:hover {
+    background: rgba(102, 126, 234, 0.2);
+    transform: scale(1.05);
+}
+
+.frequency {
+    color: #764ba2;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.stats {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+    font-style: italic;
+}
