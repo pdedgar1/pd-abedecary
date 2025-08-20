@@ -11,4 +11,13 @@ ChatGPT gave me much less fru-fru than Claude did in the styling of the CSS, whi
 
 ### Display
 
+> Okay, this looks nice but a few things are struggling. 1. I can't toggle between the sorting options. 2. the text file uploaded isn't being recognized once it's added.
+
 ### Toggle Options
+
+> Yay, the rearranged(r) works ! however, I still can't select the other options (the columns or the frequency list)
+
+### Separation 
+The last thing I needed to do was break out the sections of this interface so that everything could be edited separately, with all the scripts in separate files. That way, if I want to mess around with the display, or port over any other parts of this tool, I can do so without bringing in a ton of extra junk. At some point, I might want to put all these tools in one place, and in that case, I'd just need to port over the scripts into one file that a single HTML could reference, or that they could all relate to the same CSS stylesheet. Having them all separate like this is really helpful, so while I asked just for the HTML and was going to do the rest manually, Claude made all three. 
+
+> ok it works now!! I'm stoked! what I'd like to do now is break the javascript out and the css into separate files. would you write out how the html looks without the header and footers?
